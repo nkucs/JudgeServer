@@ -1,8 +1,12 @@
 # 1. 运行&使用
 本项目基于青岛大学OJ，原项目见
+
 https://github.com/QingdaoU/OnlineJudge
+
 https://github.com/QingdaoU/JudgeServer
+
 文档见
+
 https://docs.onlinejudge.me/#/judgeserver/api
 ## 1.1 运行
 以下均在linux或类linux环境下运行
@@ -11,11 +15,15 @@ https://docs.onlinejudge.me/#/judgeserver/api
 * docker-compose
 
 添加docker镜像：
+
 http://docker.mirrors.ustc.edu.cn
+
 http://hub-mirror.c.163.com
+
 ![image](https://i.loli.net/2019/05/25/5ce906555fd5830722.png)
 
 
+运行方法：
 ```
 git clone git@github.com:nkucs/JudgeServer.git
 cd JudgeServer
@@ -41,7 +49,9 @@ https://www.getpostman.com/downloads/
 2
 ```
 若有多个测例，编号依次为2, 3, 4, 5...
+
 输入数据后缀名.in，期望输出后缀名.out
+
 将所有.in文件和.out文件压缩为压缩包，名字不限
 
 使用postman上传测试用例，(点击"send")
@@ -90,15 +100,21 @@ https://www.getpostman.com/downloads/
 判题的模块是不加改动的[JudgeServer](https://github.com/QingdaoU/JudgeServer)(flask框架)，上传测试用例的模块是精简版的[OnlineJudge](https://github.com/QingdaoU/OnlineJudge)(Django框架)，两个模块通过Docker结合到一起。
 ## 2.1 Docker
 docker是一种类似虚拟机的技术，使程序运行在定制的环境（操作系统、编译器版本、应用程序...）中。
-本节对docker的描述可能有误，请自行学习、勘误。
+
+（本节对docker的描述可能有误，请自行学习、勘误。）
+
 自行安装docker及docker-compose，docker-compose推荐按照https://docs.docker.com/compose/install/ 安装，使用apt安装可能会出问题。
 ## image&container
 image: 镜像
+
 container: 容器
+
 一个定制的环境对应一个image，image是静态的。
+
 有程序要在这个环境下运行时，就会根据这个[镜像]创造一个[容器]，此后对这个[容器]做出的改动局限于本[容器]，不会影响到[镜像]。
 ## docker-compose
 docker-compose使用一个yml/yaml文件，把多个[镜像]合成一个service，协作提供需要的服务。
+
 本项目docker-compose.yaml文件如下:
 （基于[OnlineJudgeDeploy](https://github.com/QingdaoU/OnlineJudgeDeploy)修改）
 ```

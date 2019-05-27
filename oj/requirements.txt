@@ -21,7 +21,7 @@ python-dateutil==2.8.0
 pytz==2018.9
 qrcode==6.1
 raven==6.10.0
-requests==2.7.0
+requests==2.20.0
 six==1.12.0
 urllib3==1.24.1
 XlsxWriter==1.1.5
